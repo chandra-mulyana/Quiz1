@@ -48,6 +48,16 @@ body {
 	margin: auto;
 }
 
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 10px;
+}
+
+.grid-item {
+	padding: 10px;
+}
+
 .container_kolom {
 	display: flex;
 	flex-direction: column;
@@ -61,25 +71,11 @@ body {
 }
 
 .container_samarata {
-	margin-top: 1em;
+	margin-top: 1rem;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	gap: 10px;
-}
-
-/* Buat 2 kolom yang sama besarnya  */
-.column {
-	float: left;
-	width: 50%;
-	padding: 10px;
-}
-
-/* Clear floats setelah kolom */
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
 }
 
 .boxjudul {
@@ -88,8 +84,8 @@ body {
 }
 
 .boxsubjudul {
-	margin-top: 1em;
-	padding: 1em 0 1em 0;
+	margin-top: 0.5rem;
+	padding: 1rem 0 1rem 0;
 	font-weight: light;
 	font-size: 18px;
 	width: 494px;
@@ -165,21 +161,21 @@ body {
 	height: 65px;
 }
 
-.box_product {
+.boxharga_product {
 	display: flex;
 	flex-direction: column;
 }
 
-.namaproduct {
+.boxharga_namaproduct {
 	font-size: 16px;
 	font-weight: bold;
 }
 
-.kategori {
+.boxharga_kategori {
 	font-size: 14px;
 }
 
-.box_price {
+.boxharga_price {
 	padding: 10px 5px 0px 15px;
 	border-left: 1px solid #e4e4e4;
 	font-size: 17px;
@@ -219,5 +215,12 @@ body {
 
 	.header-right {
 		float: none;
+	}
+
+	/* Grid menjadi 1 kolom saja */
+	.grid-container {
+		display: grid;
+		grid-template-columns: 1fr;
+		column-gap: 10px;
 	}
 }
